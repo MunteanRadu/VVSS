@@ -238,6 +238,23 @@ class PizzaServiceTest {
         }
     }
 
+    @Test
+    @Disabled
+    void addPayment_TC6_BVA_Disabled() {
+        // Arrange
+        table = 9;
+        type = PaymentType.Cash;
+        amount = Double.MAX_VALUE + 1;
+
+        // Act & Assert
+        try {
+            service.addPayment(table, type, amount);
+            Assertions.fail();
+        } catch (IllegalArgumentException e) {
+            Assertions.assertTrue(true);
+        }
+    }
+
     void check(int table, PaymentType type, double amount) {
         File file = new File(filename);
         String lastLine = null;
