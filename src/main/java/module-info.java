@@ -15,5 +15,4 @@ module pizzashop {
 
     //
     opens pizzashop.service;
-    opens pizzashop.repository;
 }
