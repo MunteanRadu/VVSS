@@ -12,4 +12,7 @@ module pizzashop {
     exports pizzashop.controller;
     exports pizzashop.repository;
     exports pizzashop.service;
+
+    //
+    opens pizzashop.service;
 }
