@@ -38,7 +38,7 @@ class PizzaServiceTotalTest {
     }
 
     @Test
-    void getTotalAmount_TC01() {
+    void getTotalAmount_NonValid() {
         // Arrange
         this.payments = null;
 
@@ -66,7 +66,7 @@ class PizzaServiceTotalTest {
     }
 
     @Test
-    void getTotalAmount_TC04() {
+    void getTotalAmount_Valid() {
         // Arrange
         double expected = 23.99;
         this.payments = new ArrayList<>();
