@@ -96,7 +96,7 @@ class PizzaServiceTest {
     }
 
     @Test
-    void addPayment_TC4_ECP() {
+    void addPayment_ECP_Valid() {
         // Arrange
         table = 5;
         type = PaymentType.Cash;
@@ -124,9 +124,9 @@ class PizzaServiceTest {
     }
 
     @Test
-    void addPayment_TC6_ECP() {
+    void addPayment_ECP_NonValid() {
         // Arrange
-        table = 9;
+        table = 4;
         type = PaymentType.Card;
         amount = 0;
 
@@ -140,7 +140,7 @@ class PizzaServiceTest {
     }
 
     @Test
-    void addPayment_TC1_BVA() {
+    void addPayment_BVA_Valid() {
         // Arrange
         table = 1;
         type = PaymentType.Card;
@@ -170,7 +170,7 @@ class PizzaServiceTest {
     }
 
     @Test
-    void addPayment_TC3_BVA() {
+    void addPayment_BVA_NonValid() {
         // Arrange
         table = 9;
         type = PaymentType.Card;
