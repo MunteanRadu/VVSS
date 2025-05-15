@@ -117,6 +117,10 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.1</version>
         <configuration>
+          <argLine>
+            --add-opens pizzashop/pizzashop.service_unitTest=ALL-UNNAMED
+            --add-opens pizzashop/pizzashop.mocks=ALL-UNNAMED
+          </argLine>
         </configuration>
       </plugin>
       <plugin>
