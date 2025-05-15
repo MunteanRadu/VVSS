@@ -8,10 +8,11 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class MenuRepository {
-    private static String filename = "data/menu.txt";
+    private String filename;
     private List<MenuDataModel> listMenu;
 
-    public MenuRepository(){
+    public MenuRepository(String file){
+        this.filename = file;
     }
 
     private void readMenu(){

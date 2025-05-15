@@ -8,27 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class PaymentRepository {
-    private static String filename = "data/payments.txt";
+public class PaymentRepository implements IPaymentRepository {
+    private String filename;
     private List<Payment> paymentList;
 
-    public PaymentRepository(){
+    public PaymentRepository(String filename){
+        this.filename = filename;
         this.paymentList = new ArrayList<>();
         readPayments();
     }
 
     private void readPayments(){
-        //ClassLoader classLoader = PaymentRepository.class.getClassLoader();
         File file = new File(filename);
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader(file));
+        try(BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line = null;
             while((line=br.readLine())!=null){
                 Payment payment=getPayment(line);
                 paymentList.add(payment);
             }
-            br.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

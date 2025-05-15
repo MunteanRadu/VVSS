@@ -17,3 +17,13 @@
 1,Card,0.0
 2,Card,24.0
 1,Cash,24.0
+5,Cash,23.99
+0,Cash,23.99
+9,Cash,23.99
+5,Cash,0.0
+1,Cash,23.99
+0,Cash,23.99
+8,Cash,23.99
+9,Cash,23.99
+5,Cash,0.01
+5,Cash,0.0

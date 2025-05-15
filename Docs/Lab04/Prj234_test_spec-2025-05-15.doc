@@ -1,0 +1,1692 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>testspec Proiect234</title>
+<link type="text/css" rel="stylesheet" href="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/css/tl_documents.css" />
+<style type="text/css" media="print">.notprintable { display:none;}</style>
+</head>
+<body>
+<div>
+<div style="float:right;">TestLink Community [configure $tlCfg-&gt;document_generator-&gt;company_name]</div>
+<div>&nbsp;</div><hr />
+<p style="text-align: center;"><img alt="TestLink logo" title="configure using $tlCfg->document_generator->company_logo"  width= height= src="https://www.scs.ubbcluj.ro/testlink/gui/themes/default/images/tl-logo-transparent-25.png" /></p></div>
+<div class="doc_title"><p>Test Specification</p></div>
+<div class="doc_title" style="text-align:left;margin: auto;"><p>Test Project: Proiect234</p></div>
+<div class="summary"><p id="printedby">Printed by TestLink on 15/05/2025</p></div>
+<div class="pagefooter" id="copyright">2012 &copy; TestLink Community</div>
+<h1 class="general" style="page-break-before: always">Table Of Contents</h1><div class="toc"><p style="padding-left: 20px;"><b><a href="#toc_1">1.kkir3356_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc23763">Prj234-1: RealizarePlataTestCaseValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23765">Prj234-2: RealizarePlataTestCaseNonValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23767">Prj234-3: RealizarePlataTestCaseValidBVA</a></p><p style="padding-left: 45px;"><a href="#toc_tc23769">Prj234-4: RealizarePlataTestCaseNonValidBVA</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_2">2.ieir3349_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc23801">Prj234-5: AdaugareTaskTestCaseValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23803">Prj234-6: AdaugareTaskTestCaseInvalidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23805">Prj234-7: AdaugareTaskTestCaseValidBVA</a></p><p style="padding-left: 45px;"><a href="#toc_tc23807">Prj234-8: AdaugareTaskTestCaseInvalidBVA</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_3">3.ldir3360_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc23978">Prj234-9: AddPaymentValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23980">Prj234-10: AddPaymentNonValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc23982">Prj234-11: AddPaymentValidBVA</a></p><p style="padding-left: 45px;"><a href="#toc_tc23986">Prj234-12: AddPaymentNonValidBVA</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_4">4.ivir3355_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc24110">Prj234-17: AddTasteCase1</a></p><p style="padding-left: 45px;"><a href="#toc_tc24112">Prj234-18: AddTasteCase2</a></p><p style="padding-left: 45px;"><a href="#toc_tc24114">Prj234-19: AddTasteCase3</a></p><p style="padding-left: 45px;"><a href="#toc_tc24116">Prj234-20: AddTasteCase4</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_5">5.kkir3356_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc24323">Prj234-21: TotalIncasariTestCaseValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc24325">Prj234-22: TotalIncasariTestCaseInvalid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_6">6.lmir3359_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc24857">Prj234-23: EcpValidPayTestCase</a></p><p style="padding-left: 45px;"><a href="#toc_tc24989">Prj234-24: EcpInvalidPayTestCase</a></p><p style="padding-left: 45px;"><a href="#toc_tc24996">Prj234-25: BvaValidPayTestCase</a></p><p style="padding-left: 45px;"><a href="#toc_tc24999">Prj234-26: BvaInvalidPayTestCase</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_7">7.mcir3369_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25055">Prj234-27: AddPayment_BVA_NonValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25057">Prj234-28: AddPayment_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25059">Prj234-29: AddPayment_ECP_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25061">Prj234-30: AddPayment_ECP_NonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_8">8.mtir3368_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25130">Prj234-37: AddTask_ECP_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25132">Prj234-38: AddTask_ECP_NonValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25134">Prj234-39: AddTask_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25136">Prj234-40: AddTask_BVA_NonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_9">9.mtir3368_ReqSpec (automatically generated from req. spec.)</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25153">Prj234-41: AddTask [1]</a></p><p style="padding-left: 45px;"><a href="#toc_tc25155">Prj234-42: AddTask [2]</a></p><p style="padding-left: 45px;"><a href="#toc_tc25157">Prj234-43: AddTask [3]</a></p><p style="padding-left: 45px;"><a href="#toc_tc25159">Prj234-44: AddTask [4]</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_10">10.mrir3375_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25200">Prj234-45: AddPayment_BVA_NonValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25202">Prj234-46: AddPayment_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25204">Prj234-47: AddPayment_ECP_NonValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25206">Prj234-48: AddPayment_ECP_Valid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_11">11.ivir3355_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25543">Prj234-55: SearchTestCase1</a></p><p style="padding-left: 45px;"><a href="#toc_tc25545">Prj234-56: SearchTestCase2</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_12">12.ldir3360_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25382">Prj234-49: getTotalAmountValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25384">Prj234-50: getTotalAmountNonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_13">13.ieir3349_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25392">Prj234-51: ieir3349_WBT_TC1_Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25394">Prj234-52: ieir3349_WBT_TC2_Valid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_14">14.mcir3369_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25478">Prj234-53: GetTotalAmount_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25480">Prj234-54: GetTotalAmount_NonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_15">15.ipir3354_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25604">Prj234-57: AddPartTestCaseValidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc25606">Prj234-58: AddPartTestCaseInvalidECP</a></p><p style="padding-left: 45px;"><a href="#toc_tc25608">Prj234-59: AddPartTestCaseValidBVA</a></p><p style="padding-left: 45px;"><a href="#toc_tc25610">Prj234-60: AddPartTestCaseInvalidBVA</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_16">16.kkir3356_IntT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25777">Prj234-61: UnitTestService</a></p><p style="padding-left: 45px;"><a href="#toc_tc25779">Prj234-62: Step2IntegrationTest</a></p><p style="padding-left: 45px;"><a href="#toc_tc25781">Prj234-63: Step3FullIntegrationTest</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_17">17.mcir3365_BBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25875">Prj234-64: AddTask_ECP_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25877">Prj234-65: AddTask_ECP_NonValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25879">Prj234-66: AddTask_BVA_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc25881">Prj234-67: AddTask_BVA_NonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_18">18.ieir3349_intT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc25884">Prj234-68: TC1_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc25886">Prj234-69: TC2_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc25888">Prj234-70: TC3_intT</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_19">19.mrir3375_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26197">Prj234-71: GetTotalAmount_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26199">Prj234-72: GetTotalAmount_NonValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_20">20.mrir3375_ReqSpec (automatically generated from req. spec.)</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26202">Prj234-73: TotalPayments [1]</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_21">21.mcir3365_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26218">Prj234-74: TC1_WBT_Invalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26220">Prj234-75: TC1_WBT_Valid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_22">22.mtir3368_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26281">Prj234-76: DisplayTasks_TC01_Valid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26284">Prj234-77: DisplayTasks_TC02_Invalid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_23">23.ipir3354_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26286">Prj234-78: LookupPartInvalid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26288">Prj234-79: LookupPartValid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_24">24.ldir3360_intT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26330">Prj234-80: TC1_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc26332">Prj234-81: TC2_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc26334">Prj234-82: TC3_intT</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_25">25.lmir3359_WBT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26500">Prj234-83: TotalIncasariValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26502">Prj234-84: TotalIncasariInvalid</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_26">26.mtir3368_IntT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26530">Prj234-85: TC01_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc26532">Prj234-86: TC02_intT</a></p><p style="padding-left: 45px;"><a href="#toc_tc26534">Prj234-87: TC03_intT</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_27">27.lmir3359_IntT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26595">Prj234-88: AddPaymentValid</a></p><p style="padding-left: 45px;"><a href="#toc_tc26597">Prj234-89: AddPaymentMockE</a></p><p style="padding-left: 45px;"><a href="#toc_tc26599">Prj234-90: getPayments_S_R_E</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_28">28.mrir3375_IntT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26765">Prj234-95: UnitTest</a></p><p style="padding-left: 45px;"><a href="#toc_tc26767">Prj234-96: MockEntityIntegrationTest</a></p><p style="padding-left: 45px;"><a href="#toc_tc26769">Prj234-97: FullIntegrationTest</a></p><br/><p style="padding-left: 20px;"><b><a href="#toc_29">29.ivir3355_IntT</a></b></p>
+<p style="padding-left: 45px;"><a href="#toc_tc26758">Prj234-92: Step2:Integrare_Repo</a></p><p style="padding-left: 45px;"><a href="#toc_tc26760">Prj234-93: Step3:Integrare_Entitate</a></p><p style="padding-left: 45px;"><a href="#toc_tc26763">Prj234-94: Step1:Testare_Unitara</a></p></div><h1 class="doclevel" >Scope</h1>
+<div class="txtlevel"><p>Proiect de testare pentru studentii din grupa 234.</p></div>
+ <br/><a name='toc_1'></a>
+<h1 class='doclevel'>1.Test Suite : kkir3356_BBT</h1>
+<div><p>Se testeaza realizarea unei plati</p>
+</div><a name="toc_tc23763"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-1: RealizarePlataTestCaseValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - numar intreg</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - numar real</li>
+</ul>
+
+<p>In urma efectuarii platii, datele vor fi salvate in fisier sub forma (masa, tip plata, valoare)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - intreg din intervalul [1,8]</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - numar real pozitiv nenul</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest#addPaymentECPTest4</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23765"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-2: RealizarePlataTestCaseNonValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - numar intreg</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - numar real</li>
+</ul>
+
+<p>In urma efectuarii platii, datele vor fi salvate in fisier sub forma (masa, tip plata, valoare)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<p>masa - intreg din intervalul [1,8]<br />
+tipul platii &quot;CASH&quot;/&quot;CARD&quot;<br />
+valoarea achitata - numar real &lt;= 0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest#addPaymentECPTest2</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23767"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-3: RealizarePlataTestCaseValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - intreg</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - numar real</li>
+</ul>
+
+<p>In urma efectuarii platii, datele vor fi salvate in fisier sub forma (masa, tip plata, valoare)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - intreg din intervalul [1,8]</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata = 1.00</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest#addPaymentBVATest3</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23769"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-4: RealizarePlataTestCaseNonValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - intreg</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - numar real</li>
+</ul>
+
+<p>In urma efectuarii platii, datele vor fi salvate in fisier sub forma (masa, tip plata, valoare)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine atribute de urmatorul tip:</p>
+
+<ul>
+	<li>masa - intreg din intervalul [1,8]</li>
+	<li>tipul platii &quot;CASH&quot;/&quot;CARD&quot;</li>
+	<li>valoarea achitata - 0.0</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest#addPaymentBVATest4</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_2'></a>
+<h1 class='doclevel'>2.Test Suite : ieir3349_BBT</h1>
+<div><p>Se testeaza adaugarea unui task</p>
+</div><a name="toc_tc23801"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-5: AdaugareTaskTestCaseValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Task-ul se poate adauga. Are un title si un startDate valide si isActive este setat ca activ. endDate-ul si intervalul sunt nule (per specificatii).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>endDate == null,</p>
+
+<p>interval == null,</p>
+
+<p>startDate is valid,</p>
+
+<p>title is Valid,</p>
+
+<p>isActive is valid</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskIOTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskIOTest#testECP_1</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ieir3349_F01:  Adaugarea unui task nou [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23803"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-6: AdaugareTaskTestCaseInvalidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Task-ul nu se poate adauga. Are title, startDate, endDate valide si este setat ca activ, insa nu are intervalul setat. (Per specificatii, daca endDate este setat, si intervalul este)</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>endDate is Date,</p>
+
+<p>endDate &gt; startDate,</p>
+
+<p>interval == null,</p>
+
+<p>startDate is valid,</p>
+
+<p>title is valid,isActive is valid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskIOTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskIOTest#testECP_2</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ieir3349_F01:  Adaugarea unui task nou [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23805"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-7: AdaugareTaskTestCaseValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Task-ul se poate adauga. Are title, startDate, endDate, interval valide si isActive este setat ca activ.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>startDate &lt; endDate</p>
+
+<p>startDate is Date,</p>
+
+<p>endDate is Date,</p>
+
+<p>interval &gt; 0 and is int,</p>
+
+<p>isActive is boolean</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskIOTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskIOTest#testBVA_1</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ieir3349_F01:  Adaugarea unui task nou [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23807"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-8: AdaugareTaskTestCaseInvalidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Task-ul nu poate fi adaugat. Are title, endDate, interval si isActive valide, dar startDate este setat ca negativ</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>startDate is Date,</p>
+
+<p>startDate &lt; Date(0)</p>
+
+<p>endDate is valid,</p>
+
+<p>interval is valid,</p>
+
+<p>title is valid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskIOTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskIOTest#testBVA_2</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ieir3349_F01:  Adaugarea unui task nou [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_3'></a>
+<h1 class='doclevel'>3.Test Suite : ldir3360_BBT</h1>
+<div><p>Se testeaza efectuarea unei plati.</p>
+</div><a name="toc_tc23978"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-9: AddPaymentValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test valid ECP.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>table = 3</p>
+
+<p>amount = 40</p>
+
+<p>type = CASH</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addPaymentValidECP</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23980"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-10: AddPaymentNonValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test invalid ECP.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>table = 2</p>
+
+<p>amount = -10</p>
+
+<p>type = CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addPaymentNonValidECP</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23982"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-11: AddPaymentValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test valid BVA.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>table = 7</p>
+
+<p>amount = 9999.99</p>
+
+<p>type = CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addPaymentValidBVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc23986"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-12: AddPaymentNonValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test invalid BVA.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>table = 9</p>
+
+<p>amount = 50</p>
+
+<p>type = CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addPaymentNonValidBVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_4'></a>
+<h1 class='doclevel'>4.Test Suite : ivir3355_BBT</h1>
+<a name="toc_tc24110"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-17: AddTasteCase1&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3355</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Partea este valida contine toate campurile, iar toate campurile sunte nenule</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>length(nume)&gt;0</p>
+
+<p>pret&gt;0</p>
+
+<p>cantitate&gt;0</p>
+
+<p>cantitate min &gt; 0</p>
+
+<p>cantitate max &gt;0</p>
+
+<p>part dynamic value != null</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3352_F01:  Realizarea unei plati [Version : 1]<br />ivir3355_F01:  Adaugarea unei parti [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24112"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-18: AddTasteCase2&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3355</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Partea este invalida contine toate campurile, dar pretul este negativ</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>length(nume)&gt;0</p>
+
+<p>pret&lt;=0</p>
+
+<p>cantitate&gt;0</p>
+
+<p>cantitate min &gt; 0</p>
+
+<p>cantitate max &gt;0</p>
+
+<p>part dynamic value != null</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F01:  Adaugarea unei parti [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24114"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-19: AddTasteCase3&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3355</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Partea este invalida contine toate campurile, dar numele este stringul gol</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>length(nume)&lt;=0</p>
+
+<p>pret&gt;0</p>
+
+<p>cantitate&gt;0</p>
+
+<p>cantitate min &gt; 0</p>
+
+<p>cantitate max &gt;0</p>
+
+<p>part dynamic value != null</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F01:  Adaugarea unei parti [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24116"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-20: AddTasteCase4&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ivir3355</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Partea este valida contine toate campurile, iar toate campurile sunt nenule</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>length(nume)=255</p>
+
+<p>pret&gt;0</p>
+
+<p>cantitate&gt;0</p>
+
+<p>cantitate min &gt; 0</p>
+
+<p>cantitate max &gt;0</p>
+
+<p>part dynamic value != null</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F01:  Adaugarea unei parti [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_5'></a>
+<h1 class='doclevel'>5.Test Suite : kkir3356_WBT</h1>
+<div><p>Se testeaza afisarea totalului de incasari realizate la inchiderea restaurantului.</p>
+</div><a name="toc_tc24323"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-21: TotalIncasariTestCaseValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Restaurantul este inchis.</p>
+
+<p>Se da un tip de plata (CASH/CARD) si se returneaza totalul incasarilor care au tipul de plata respectiv.</p>
+
+<p>Totalul incasarilor este un numar real pozitiv.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>restaurant inchis</li>
+	<li>plata este CASH/CARD</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#getTotalAmountTC03</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F02:  Afisare total incasari [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24325"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-22: TotalIncasariTestCaseInvalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">ivir3352</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Restaurantul este inchis.</p>
+
+<p>Se da un tip de plata (CASH/CARD) si se returneaza totalul incasarilor care au tipul de plata respectiv.</p>
+
+<p>Totalul incasarilor este un numar real pozitiv.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>restaurantul este inchis</li>
+	<li>plata este CASH/CARD</li>
+	<li>nu s-a realizat nicio plata pana la inchiderea restaurantului</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#getTotalAmountTC04</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F02:  Afisare total incasari [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_6'></a>
+<h1 class='doclevel'>6.Test Suite : lmir3359_BBT</h1>
+<a name="toc_tc24857"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-23: EcpValidPayTestCase&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">lmir3359</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se verifică acceptarea unui payment valid cu masa 3, metoda Card și suma 45.50 lei.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>- Masa 3 este activă &icirc;n aplicație<br />
+- Aplicația rulează și serviciul PizzaService este inițializat<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>1.Selecteaza masa 3</p>
+
+<p>2. Apasa butonul Add to order pizzas</p>
+
+<p>3.Apasa butonul Place Order</p>
+
+<p>4.Apasa butonul Order Served</p>
+
+<p>5.Apasa butonul Pay Order</p>
+
+<p>6.Alege optiunea: &quot;Pay by Card&quot;</p>
+</td><td><p>- Plata este salvată cu succes &icirc;n aplicație<br />
+- Obiectul Payment este adăugat &icirc;n payRepo cu:<br />
+&nbsp; &nbsp; table = 3<br />
+&nbsp; &nbsp; type = Card<br />
+&nbsp; &nbsp; amount = 45.50<br />
+&nbsp;</p>
+</td></tr><tr><td width="5">2</td><td></td><td></td></tr><tr><td width="5">3</td><td></td><td></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addValidPaymentTestEC1</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24989"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-24: EcpInvalidPayTestCase&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se verifică comportamentul aplicației la introducerea unui payment cu o valoare invalidă pentru numărul mesei (&icirc;n afara intervalului valid 1&ndash;8). Se folosește exemplul: masa = 10, metodă = Cash, suma = 50.00 lei.<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>- Aplicația este pornită<br />
+- PizzaService este inițializat<br />
+- Masa 10 **nu există** &icirc;n aplicație (masa validă este &icirc;n intervalul [1, 8])<br />
+&nbsp;</p>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>1.Apeleaza functia&nbsp;addPayment cu parametrii:</p>
+
+<p>- tableNumber = 10</p>
+
+<p>-paymentType = Card<br />
+&nbsp;- totalAmount = 50.00</p>
+</td><td><p>- Plata nu trebuie procesată.<br />
+- Niciun obiect Payment nu este adăugat &icirc;n payRepo.<br />
+- Se aruncă o excepție sau se &icirc;nregistrează un mesaj de eroare (&icirc;n funcție de implementare).</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addInvalidPaymentTestEC</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24996"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-25: BvaValidPayTestCase&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">lmir3359</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verificarea comportamentului aplicației la limita inferioară validă a parametrului amount. Se folosește valoarea amount = 0.0, care este permisă.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>
+	<p>Aplicația rulează corect.</p>
+	</li>
+	<li>
+	<p>Masa 3 este validă.</p>
+	</li>
+	<li>
+	<p>PizzaService este inițializat</p>
+	</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>1. Apelează metoda addPayment cu următorii parametri:</p>
+
+<p>&nbsp; &nbsp;- tableNumber = 3 (valid)<br />
+&nbsp; &nbsp;- paymentType = Card<br />
+&nbsp; &nbsp;- totalAmount = 0.0 (valoare de graniță validă)<br />
+&nbsp;</p>
+</td><td><p>- Plata este procesată cu succes.<br />
+- Obiectul Payment este adăugat &icirc;n payRepo cu:<br />
+&nbsp; &nbsp; table = 3<br />
+&nbsp; &nbsp; type = Card<br />
+&nbsp; &nbsp; amount = 0.0<br />
+&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addValidPaymentTestBva</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc24999"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-26: BvaInvalidPayTestCase&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">lmir3359</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Verificarea comportamentului aplicației la o valoare <strong>sub limita validă</strong> pentru amount. Se folosește amount = -0.01, care este invalid.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><ul>
+	<li>
+	<p>Aplicația este pornită.</p>
+	</li>
+	<li>
+	<p>Masa 3&nbsp;este validă.</p>
+	</li>
+</ul>
+</td></tr><tr><td><span class="label">#:</span></td><td><span class="label">Step actions:</span></td><td><span class="label">Expected Results:</span></td></tr><tr><td width="5">1</td><td><p>1. Apelează metoda addPayment cu următorii parametri:</p>
+
+<p>&nbsp; &nbsp;- tableNumber = 4 (valid)<br />
+&nbsp; &nbsp;- paymentType = Cash<br />
+&nbsp; &nbsp;- totalAmount = -0.01 (valoare sub limita minimă acceptată)<br />
+&nbsp;</p>
+</td><td><p>- Plata NU este acceptată de sistem.<br />
+- Nu se adaugă niciun obiect Payment &icirc;n payRepo.<br />
+- Este returnată o exceptie<br />
+&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#addInvalidPaymentTestBva4</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_7'></a>
+<h1 class='doclevel'>7.Test Suite : mcir3369_BBT</h1>
+<div><p>Se testeaza inregistrarea platii</p>
+</div><a name="toc_tc25055"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-27: AddPayment_BVA_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>&nbsp;table = 0</p>
+
+<p>&nbsp;amount = 0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest#testTC1_BVA_InvalidTableAndZeroAmount</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F01:  Inregistrarea platii [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25057"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-28: AddPayment_BVA_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>table = 1</p>
+
+<p>amount = MAX_DOUBLE - 1</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest#testTC3_BVA_UpperAmountMinusOne</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F01:  Inregistrarea platii [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25059"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-29: AddPayment_ECP_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>table = 1</p>
+
+<p>type = CASH</p>
+
+<p>amount = 10.0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest#testAddValidPayment</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F01:  Inregistrarea platii [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25061"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-30: AddPayment_ECP_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>amount = -1</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PaymentRepositoryTest#testAddPaymentInvalidAmount</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F01:  Inregistrarea platii [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_8'></a>
+<h1 class='doclevel'>8.Test Suite : mtir3368_BBT</h1>
+<div><p>Test the add task functionality.</p>
+</div><a name="toc_tc25130"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-37: AddTask_ECP_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>When entering the details of a task, the user inputs for the title a valid String (e.g. &quot;Meeting&quot;), with length between 1 and 255.<br />
+<br />
+1 &lt;= len(title) &lt;= 255</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceTest#testValidTaskCreationECP</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25132"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-38: AddTask_ECP_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>When entering the details of a task, the user inputs for title an empty invalid String.<br />
+<br />
+len(title) = 0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceTest#testEmptyTitleThrowsExceptionECP</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25134"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-39: AddTask_BVA_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>When entering the details of a task, the user selected the repeated option, and inputs a valid end date and time which is after the start date time. (Just 1 minute after the start date time, in order to test the lowest valid value)<br />
+<br />
+endDateTime = 2025/04/03&nbsp;10:01 &gt; startDateTime = 2025/04/03&nbsp;10:00</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceTest#testRepeatedTaskCreationBVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25136"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-40: AddTask_BVA_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>When entering the details of a task, the user selected the repeated option, and inputs an invalid end date and time which is before the start date time. (Just 1 minute before the start date time, in order to test the highest invalid value)</p>
+
+<p>endDateTime = 2025/04/03&nbsp;9:59&nbsp;&lt;&nbsp;startDateTime = 2025/04/03&nbsp;10:00</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceTest#testEndDateBeforeStartDateThrowsExceptionWithABVA</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_9'></a>
+<h1 class='doclevel'>9.Test Suite : mtir3368_ReqSpec (automatically generated from req. spec.)</h1>
+<div>Test Cases in the Test Suite are generated from Requirements. A refinement of test scenario is highly recommended.</div><a name="toc_tc25153"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-41: AddTask [1]&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><b>The Test Case was generated from the assigned requirement <a href="javascript:openLinkedReqVersionWindow(25114,25115)">"AddTask" (version 1)</a>.</b><br /></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25155"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-42: AddTask [2]&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><b>The Test Case was generated from the assigned requirement <a href="javascript:openLinkedReqVersionWindow(25114,25115)">"AddTask" (version 1)</a>.</b><br /></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25157"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-43: AddTask [3]&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><b>The Test Case was generated from the assigned requirement <a href="javascript:openLinkedReqVersionWindow(25114,25115)">"AddTask" (version 1)</a>.</b><br /></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25159"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-44: AddTask [4]&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><b>The Test Case was generated from the assigned requirement <a href="javascript:openLinkedReqVersionWindow(25114,25115)">"AddTask" (version 1)</a>.</b><br /></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F01:  AddTask [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_10'></a>
+<h1 class='doclevel'>10.Test Suite : mrir3375_BBT</h1>
+<div><p>Se testeaza adaugarea unei plati</p>
+</div><a name="toc_tc25200"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-45: AddPayment_BVA_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine urmatoarele atribute:<br />
+table - integer</p>
+
+<p>paymentType - CASH/CARD</p>
+
+<p>amount - double</p>
+
+<p>Dupa efectuarea platii, datele vor fi salvate intr-un fisier sub forma &lt;table&gt;, &lt;paymentType&gt;, &lt;amount&gt;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine urmatoarele atribute:</p>
+
+<p>table - 9</p>
+
+<p>paymentType - CASH</p>
+
+<p>amount - 23.99</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#addPayment_BVA_NonValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F01:  AddPayment [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25202"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-46: AddPayment_BVA_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine urmatoarele atribute:<br />
+table - integer</p>
+
+<p>paymentType - CASH/CARD</p>
+
+<p>amount - double</p>
+
+<p>Dupa efectuarea platii, datele vor fi salvate intr-un fisier sub forma &lt;table&gt;, &lt;paymentType&gt;, &lt;amount&gt;<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine urmatoarele atribute:</p>
+
+<p>table - 5</p>
+
+<p>paymentType - CARD</p>
+
+<p>amount - 19.25</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#addPayment_BVA_Valid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F01:  AddPayment [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25204"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-47: AddPayment_ECP_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine urmatoarele atribute:<br />
+table - integer</p>
+
+<p>paymentType - CASH/CARD</p>
+
+<p>amount - double</p>
+
+<p>Dupa efectuarea platii, datele vor fi salvate intr-un fisier sub forma &lt;table&gt;, &lt;paymentType&gt;, &lt;amount&gt;<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine urmatoarele atribute:</p>
+
+<p>table - 4</p>
+
+<p>paymentType - CASH</p>
+
+<p>amount - -23.99</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#addPayment_ECP_NonValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F01:  AddPayment [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25206"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-48: AddPayment_ECP_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Plata contine urmatoarele atribute:<br />
+table - integer</p>
+
+<p>paymentType - CASH/CARD</p>
+
+<p>amount - double</p>
+
+<p>Dupa efectuarea platii, datele vor fi salvate intr-un fisier sub forma &lt;table&gt;, &lt;paymentType&gt;, &lt;amount&gt;<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Plata contine urmatoarele atribute:</p>
+
+<p>table - 6</p>
+
+<p>paymentType - CASH</p>
+
+<p>amount - 35.45<br />
+&nbsp;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest#addPayment_ECP_Valid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F01:  AddPayment [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_11'></a>
+<h1 class='doclevel'>11.Test Suite : ivir3355_WBT</h1>
+<a name="toc_tc25543"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-55: SearchTestCase1&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ilir3351</td></tr>
+<tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>products is empty</p>
+
+<p>search for &quot;produs&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F02:  Cautarea unui produs [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25545"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-56: SearchTestCase2&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ilir3351</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>products = {(&quot;P1&quot;),(&quot;P2&quot;),(&quot;P3&quot;),(&quot;Produs&quot;)}</p>
+
+<p>search for &quot;Produs&quot;</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F02:  Cautarea unui produs [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_12'></a>
+<h1 class='doclevel'>12.Test Suite : ldir3360_WBT</h1>
+<div><p>Se testeaza calculul incasarilor totale.</p>
+</div><a name="toc_tc25382"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-49: getTotalAmountValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test WBT valid</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>type = CASH</p>
+
+<p>l = [Payment(3, Card, 15), Payment(1, Cash, 28)]</p>
+
+<p>S-au realizat deja plati pentru CASH</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#getTotalAmountWBT4</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F02:  Calcul incasari totale [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25384"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-50: getTotalAmountNonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Test WBT invalid</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>type = CARD</p>
+
+<p>l = []</p>
+
+<p>NU s-au realizat deja plati pentru CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#getTotalAmountWBT2</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F02:  Calcul incasari totale [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_13'></a>
+<h1 class='doclevel'>13.Test Suite : ieir3349_WBT</h1>
+<div><p>Se testeaza filtrarea unui task.</p>
+</div><a name="toc_tc25392"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-51: ieir3349_WBT_TC1_Invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Summary:</p>
+
+<p>start = 02/04/2025 12:00</p>
+
+<p>end = 01/04/2025 12:00</p>
+
+<p>tasks = [(task activ, nerepetitiv cu start=03/04/2025 12:00)]</p>
+
+<p>&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>start: is DateTime</p>
+
+<p>end: is DateTime</p>
+
+<p>task: is not repetitive</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.model.TasksOperationsTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.model.TasksOperationsTest#testFC02_TC01</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25394"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-52: ieir3349_WBT_TC2_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Summary:</p>
+
+<p>start = 02/04/2024 12:00</p>
+
+<p>end = 04/04/2024 12:00</p>
+
+<p>tasks = [(task activ, repetitiv cu start=03/04/2024 12:00)]</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>start: is DateTime</p>
+
+<p>end: is DateTime</p>
+
+<p>task: is repetitive</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.model.TasksOperationsTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.model.TasksOperationsTest#testFC02_TC05</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_14'></a>
+<h1 class='doclevel'>14.Test Suite : mcir3369_WBT</h1>
+<div><p>Se testeaza vizualizarea totalului&nbsp;incasarilor realizate pana la inchiderea restaurantului</p>
+</div><a name="toc_tc25478"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-53: GetTotalAmount_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca functia merge corect pe o lista nevida si rezultat nenul</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>&nbsp;l = lista de 2 elemente</p>
+
+<p>&nbsp;type = PaymentType.CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PizzaServiceTest#testF02_TC05_TxoCardPaymentsSumCorrectly</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F02:  Vizualizarea incasarilor [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25480"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-54: GetTotalAmount_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3369</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca functia se comporta corect pe date incorecte (exemplu:&nbsp;arunca exceptie)&nbsp; &nbsp;&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>&nbsp;l = null</p>
+
+<p>&nbsp;type=PaymentType.CASH</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >test.pizzashop.repository.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >test.pizzashop.repository.PizzaServiceTest#testF02_TC01_NullListThrows</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3369_F02:  Vizualizarea incasarilor [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_15'></a>
+<h1 class='doclevel'>15.Test Suite : ipir3354_BBT</h1>
+<div><p>Se testeaza adaugarea unui produs in fisier.</p>
+</div><a name="toc_tc25604"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-57: AddPartTestCaseValidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Adaugarea unei piese fabricate inhouse cu date valide.<br />
+&nbsp;</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>name: &quot;piesa1&quot;</p>
+
+<p>price: 15.2</p>
+
+<p>inStock: 5</p>
+
+<p>min: 2</p>
+
+<p>max: 7</p>
+
+<p>machineId: 10</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.service.InventoryServiceTests</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >addInhousePart_whenPartHasValidData_shouldAddPartToFile</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F01:  AddPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25606"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-58: AddPartTestCaseInvalidECP&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Adaugarea unei piese fabricate inhouse cu date invalide.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>name: &quot;piesa2&quot;</p>
+
+<p>price: 30</p>
+
+<p>inStock: 25</p>
+
+<p>min: 5</p>
+
+<p>max: 20</p>
+
+<p>machineId: 10</p>
+
+<p>&nbsp;</p>
+
+<p>inStock &gt; max =&gt; invalid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F01:  AddPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25608"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-59: AddPartTestCaseValidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Adaugarea unei piese fabricate inhouse cu date valide - BVA.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>name: &quot;piesa3&quot;</p>
+
+<p>price: 30</p>
+
+<p>inStock: 20</p>
+
+<p>min: 5</p>
+
+<p>max: 20</p>
+
+<p>machineId: 10</p>
+
+<p>&nbsp;</p>
+
+<p>inStock =&nbsp;max =&gt; valid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F01:  AddPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25610"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-60: AddPartTestCaseInvalidBVA&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Adaugarea unei piese fabricate inhouse cu date invalide - BVA.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>name: &quot;piesa2&quot;</p>
+
+<p>price: 30</p>
+
+<p>inStock: 21</p>
+
+<p>min: 5</p>
+
+<p>max: 20</p>
+
+<p>machineId: 10</p>
+
+<p>&nbsp;</p>
+
+<p>inStock &gt; max =&gt; invalid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F01:  AddPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_16'></a>
+<h1 class='doclevel'>16.Test Suite : kkir3356_IntT</h1>
+<div><p>Testare de integrare</p>
+</div><a name="toc_tc25777"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-61: UnitTestService&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Lista de Payments este formata din Payment-ul cu atributele (1, &quot;CASH&quot;, 12.2)</p>
+
+<p>Se testeaza totalAmount de payments per tip de tranzactie.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Lista de Payments = [Payment(1, &quot;CASH&quot;, 12.2)]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceUnitTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceUnitTest#paymentTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F02:  Afisare total incasari [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25779"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-62: Step2IntegrationTest&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Fisierul contine o singura inregistrare formatata gresit.</p>
+
+<p>Lista meniului care este returnata va fi goala.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Fisierul contine o singura inregistrare cu format gresit.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceIntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceIntegrationTest#invalidTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25781"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-63: Step3FullIntegrationTest&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">kkir3356</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Fisierul contine doua inregistrari, una formatata gresit, iar cealalata corect.</p>
+
+<p>Se returneaza lista formata din inregistrarea cu format corect.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>Fisierul contine 2 inregistrari, una corecta, una gresita.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceFullIntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceFullIntegrationTest#validTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">kkir3356_F01:  Realizarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_17'></a>
+<h1 class='doclevel'>17.Test Suite : mcir3365_BBT</h1>
+<div><p>Testează funcționalitatea de adăugare a unei sarcini.</p>
+</div><a name="toc_tc25875"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-64: AddTask_ECP_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3365</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>C&acirc;nd introduce detaliile unei sarcini, utilizatorul completează c&acirc;mpul pentru titlu cu un șir de caractere valid, av&acirc;nd o lungime cuprinsă &icirc;ntre 1 și 255 de caractere.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>1 &lt;= len(title) &lt;= 255</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.service.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.service.TaskServuceTest#testAddTaskECPValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25877"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-65: AddTask_ECP_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3365</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>C&acirc;nd introduce detaliile unei sarcini, utilizatorul completează c&acirc;mpul pentru titlu cu un șir de caractere gol, considerat invalid.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>len(title) = 0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.service.TaskServuceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.service.TaskServuceTest#testAddTaskECPNonValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25879"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-66: AddTask_BVA_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3365</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>C&acirc;nd introduce detaliile unei sarcini, utilizatorul selectează opțiunea de repetare și completează un moment valid pentru data și ora de &icirc;ncheiere, care este ulterior datei și orei de &icirc;nceput (cu doar un minut mai t&acirc;rziu, pentru a testa valoarea minimă validă).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>endDateTime = 2025/04/01 10:01 &gt; startDateTime = 2025/04/01 10:00</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.service.TaskServuceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.service.TaskServuceTest#testAddTaskBVAValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25881"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-67: AddTask_BVA_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mcir3365</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>C&acirc;nd introduce detaliile unei sarcini, utilizatorul selectează opțiunea de repetare și completează o dată și oră de &icirc;ncheiere invalidă, care este anterioară datei și orei de &icirc;nceput (cu doar un minut mai devreme, pentru a testa cea mai mare valoare invalidă posibilă).</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>endDateTime = 2025/04/01 9:59&nbsp;&lt;&nbsp;startDateTime = 2025/04/01 10:00</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.service.TaskServuceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.service.TaskServuceTest#testAddTaskBVAValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_18'></a>
+<h1 class='doclevel'>18.Test Suite : ieir3349_intT</h1>
+<div><p>Test Suiting for mosquitos</p>
+</div><a name="toc_tc25884"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-68: TC1_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testare Unitara S</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TasksServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TasksServiceTest#filterTasksTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25886"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-69: TC2_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>testare S cu integrare R</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TasksServiceIntegrationRepoTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TasksServiceIntegrationRepoTest#filterTasksTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc25888"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-70: TC3_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ieir3349</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>testare S cu integrare R si E</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TasksServiceIntegrationFullTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TasksServiceIntegrationFullTest#filterTasksTest</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_19'></a>
+<h1 class='doclevel'>19.Test Suite : mrir3375_WBT</h1>
+<div><p>Se testeaza vizualizarea totalului incasarilor la inchiderea PizzaShop.</p>
+</div><a name="toc_tc26197"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-71: GetTotalAmount_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca functia getTotalAmount(PaymentType type) functioneaza corect daca lista de payments contine elemente valide.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>PaymentType este { Cash/Card }</p>
+
+<p>Lista de payments contine elemente valide.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest_WBT#getTotalAmount_Valid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F02:  GetTotalAmount [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26199"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-72: GetTotalAmount_NonValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca functia getTotalAmount(PaymentType type) functioneaza corect pe valori invalide.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>PaymentType nu este { Cash/Card }</p>
+
+<p>Lista de payments nu contine elemente valide.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PizzaServiceTest_WBT#getTotalAmount_NonValid</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F02:  GetTotalAmount [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_20'></a>
+<h1 class='doclevel'>20.Test Suite : mrir3375_ReqSpec (automatically generated from req. spec.)</h1>
+<div>Test Cases in the Test Suite are generated from Requirements. A refinement of test scenario is highly recommended.</div><a name="toc_tc26202"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-73: TotalPayments [1]&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><b>The Test Case was generated from the assigned requirement <a href="javascript:openLinkedReqVersionWindow(26192,26193)">"TotalPayments" (version 1)</a>.</b><br /></td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_21'></a>
+<h1 class='doclevel'>21.Test Suite : mcir3365_WBT</h1>
+<a name="toc_tc26218"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-74: TC1_WBT_Invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">msir3370</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><table border="1" cellspacing="0" style="width:624px">
+	<tbody>
+		<tr>
+			<td style="border-color:black; vertical-align:top; width:467.9pt">
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+			<p>&nbsp;</p>
+
+			<p>start = 02/04/2024 12:00</p>
+
+			<p>end = 01/04/2024 12:00</p>
+
+			<p>tasks = [(task activ, nerepetitiv cu start=03/04/2024 12:00)]</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3365_F02:  F02 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26220"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-75: TC1_WBT_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">msir3370</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>start = 02/04/2024 12:00</p>
+
+<p>end = 04/04/2024 12:00</p>
+
+<p>tasks = [(task activ, repetitiv cu start=03/04/2024 12:00)]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mcir3365_F02:  F02 [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_22'></a>
+<h1 class='doclevel'>22.Test Suite : mtir3368_WBT</h1>
+<div><p>Test the display tasks functionality.</p>
+</div><a name="toc_tc26281"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-76: DisplayTasks_TC01_Valid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Two repetitive&nbsp;active tasks with valid occurrence between&nbsp;start and end. Both should be added to the list and displayed</p>
+
+<p>Parameters:</p>
+
+<ul>
+	<li>
+	<p>tasks: [2 x active, repetitive task with start = 05/05/2025 12:00]</p>
+	</li>
+	<li>
+	<p>start: 05/04/2025 12:00</p>
+	</li>
+	<li>
+	<p>end: 07/04/2025 12:00</p>
+	</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskOperationsTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskOperationsTest#testFC02_TC06</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F02:  DisplayTasks [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26284"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-77: DisplayTasks_TC02_Invalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>One repetitive task, but null values provided for start and end. Should throw NullPointerException</p>
+
+<p>Parameters:</p>
+
+<ul>
+	<li>
+	<p>tasks: [task with start = 05/05/2025 12:00]</p>
+	</li>
+	<li>
+	<p>start: null</p>
+	</li>
+	<li>
+	<p>end: null</p>
+	</li>
+</ul>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskOperationsTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskOperationsTest#testFC02_TC07</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F02:  DisplayTasks [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_23'></a>
+<h1 class='doclevel'>23.Test Suite : ipir3354_WBT</h1>
+<a name="toc_tc26286"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-78: LookupPartInvalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca metoda LookupPart(String search)&nbsp;arunca exceptie in cazul in care argumentul este null.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>search = null</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F02:  LookupPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26288"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-79: LookupPartValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ipir3354</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza daca metoda lookupPart(String search)&nbsp;returneaza piesa cautata corect, in functie de argument.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>search = nume de piesa valid</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ipir3354_F02:  LookupPart [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_24'></a>
+<h1 class='doclevel'>24.Test Suite : ldir3360_intT</h1>
+<div><p>Teste de integrare</p>
+</div><a name="toc_tc26330"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-80: TC1_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testare unitara E, R, S</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTestJUnit</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTestJUnit#getTotalAmountReturnsSumForType</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F02:  Calcul incasari totale [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26332"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-81: TC2_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testare integrare R (S cu R)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceIntegrationRTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceIntegrationRTest#addPayment_ShouldPersistOnePayment</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26334"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-82: TC3_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ldir3360</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testare integrare E (S + R cu E)</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceFullIntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceFullIntegrationTest#persistenceAcrossInstances</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">PizzaShop_F01:  Efectuarea unei plati [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_25'></a>
+<h1 class='doclevel'>25.Test Suite : lmir3359_WBT</h1>
+<div><p>Se testeaza afisarea totalului de incasari pentru fiecare tip de plata la inchiderea restaurantului.</p>
+</div><a name="toc_tc26500"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-83: TotalIncasariValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">iair3353</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Restaurantul s-a inchis.<br />
+<br />
+Se da un tip de plata (CASH/CARD) si se returneaza totalul incasarilor pentru acel tip de plata.<br />
+<br />
+Totalul incasarilor este un numar real pozitiv.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>restaurant inchis</p>
+
+<p>plata este CASH/CARD</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#getTotalAmountTest1</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F02:  Afisare total incasari [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26502"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-84: TotalIncasariInvalid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Last edit by:</span></td><td colspan="3">iair3353</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Restaurantul este inchis.</p>
+
+<p>Se da un tip de plata (CASH/CARD) si va returna totalul incasarilor care au tipul de plata respectiv.</p>
+
+<p>Totalul incasarilor este un numar real pozitiv.</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>restaurantul este inchis</p>
+
+<p>plata este CASH/CARD<br />
+<br />
+nu s-a realizat nicio plata pana la inchiderea restaurantului</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceTest#getTotalAmountTest2</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">lmir3359_F02:  Afisare total incasari [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_26'></a>
+<h1 class='doclevel'>26.Test Suite : mtir3368_IntT</h1>
+<div><p>Top-down Integration testing suite for modules E, R, S.</p>
+</div><a name="toc_tc26530"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-85: TC01_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Unit test of the S module.</p>
+
+<p>Should return a list of filtered tasks based on their start and end time.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceTest#testFilterTasks</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F02:  DisplayTasks [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26532"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-86: TC02_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Integration test of the R module in S.</p>
+
+<p>Should return a list of filtered tasks based on their start and end times.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceIntegrationRepoTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceIntegrationRepoTest#testFilterTasks</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F02:  DisplayTasks [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26534"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-87: TC03_intT&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3368</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Integration test of S with R and E.</p>
+
+<p>Should return a list of filtered tasks based on their start and end times.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >tasks.services.TaskServiceIntegrationFullTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >tasks.services.TaskServiceIntegrationFullTest#testFilterTasks</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mtir3368_F02:  DisplayTasks [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_27'></a>
+<h1 class='doclevel'>27.Test Suite : lmir3359_IntT</h1>
+<div><p>test suite</p>
+</div><a name="toc_tc26595"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-88: AddPaymentValid&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>AddPaymentValid</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>table valid [1,8]</p>
+
+<p>Payment valid [Cash,card}</p>
+
+<p>amount &gt;= 0</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep1MockTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep1MockTest#testAddPayment_validInput_addsPayment</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26597"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-89: AddPaymentMockE&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>AddPaymentMockE</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>AddPaymentMockE</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep2MockTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep2MockTest#addPayment</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26599"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-90: getPayments_S_R_E&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mtir3376</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>getPayments_S_R_E</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>getPayments_S_R_E</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep3MockTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service.PaymentServiceStep3MockTest#getPayments</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_28'></a>
+<h1 class='doclevel'>28.Test Suite : mrir3375_IntT</h1>
+<div><p>Integrare Top Down</p>
+</div><a name="toc_tc26765"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-95: UnitTest&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza getTotalAmount()</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>List&lt;Payments&gt; = [8,Cash,23.99]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.service_unitTest.PizzaServiceUnitTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.service_unitTest.PizzaServiceUnitTest#getTotalAmount</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F02:  GetTotalAmount [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26767"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-96: MockEntityIntegrationTest&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza getTotalAmount() cu entitati Mock</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>List&lt;Payment&gt; = [[8,Card,23.99], [5,Cash,12.99]]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.mocks.MockEntityIntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.mocks.MockEntityIntegrationTest#test_getTotalAmount</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F02:  GetTotalAmount [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26769"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-97: FullIntegrationTest&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">mrir3375</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Se testeaza getTotalAmount() cu entitati reale</p>
+</td></tr><tr><td colspan="4"><span class="label">Preconditions:</span><br /><p>List&lt;Payment&gt; = [[8,Card,23.99], [5,Cash,12.99]]</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.mocks.NoMockEntityIntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.mocks.NoMockEntityIntegrationTest#test_getTotalAmount</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">mrir3375_F02:  GetTotalAmount [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name='toc_29'></a>
+<h1 class='doclevel'>29.Test Suite : ivir3355_IntT</h1>
+<a name="toc_tc26758"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-92: Step2:Integrare_Repo&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ilir3351</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.RepoServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >inventory.RepoServiceTest#testAddPrdouctWithMockedProduct</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F01:  Adaugarea unei parti [Version : 1]<br />ivir3355_F02:  Cautarea unui produs [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26760"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-93: Step3:Integrare_Entitate&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ilir3351</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.InventoryServiceTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >inventory.InventoryServiceTest#testAddInhousePart</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">ivir3355_F01:  Adaugarea unei parti [Version : 1]<br />ivir3355_F02:  Cautarea unui produs [Version : 1]<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+<a name="toc_tc26763"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case Prj234-94: Step1:Testare_Unitara&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
+<tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">ilir3351</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Testare Unitara pentru fiecare componenta S,R, E</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Automated</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >inventory.ProductTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >inventory.ProductTest#testIsValidProduct</td></tr>
+<tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">&nbsp;None<br /></td></tr>
+<tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
+</table>
+</div>
+
+</body>
+</html>
